@@ -1,0 +1,553 @@
+.agencies_header {
+	width: 100%;
+	height: 348px;
+	position: relative;
+	@include gradient-radial(#E5E8EC, #C7D1DD);
+
+	.agencies_header__animate_block {
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 108px;
+		display: block;
+		position: absolute;
+		background: url("../img/agencies_city.png") 0 0 repeat-x;
+	}
+}
+
+.agencies_header__container {
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 17px 10px 0 10px;
+	@include clearfix()
+}
+
+.agencies_header__name {
+	width: 280px;
+	display: block;
+	margin: 14px auto 0 auto;
+
+	.agencies_header_link {
+		display: block;
+		color: #72787e;
+		text-decoration: none;
+	}
+
+	.agencies_header__age {
+		font-size: 24px;
+		display: block;
+		position: relative;
+		margin-bottom: 20px;
+		font-weight: normal;
+		border-bottom: 2px solid #72787E;
+		font-family: "Continue", "Georgia";
+
+		em {
+			right: 0;
+			bottom: 5px;
+			color: #fff;
+			display: block;
+			font-size: 14px;
+			line-height: 17px;
+			position: absolute;
+			font-style: normal;
+			border-radius: 2px;
+			font-weight: normal;
+			padding: 1px 4px 2px 4px;
+			font-family: $font-calibi;
+			background-color: #FF7420;
+			text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+		}
+	}
+
+	.agencies_header__header {
+		margin: 0;
+		font-size: 30px;
+		text-transform: uppercase;
+		font-family: "Continue", "Georgia";
+
+		small {
+			font-size: 14px;
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+
+	.agencies_header__links {
+		float: right;
+		color: #72787E;
+		font-size: 15px;
+		margin-top: 23px;
+		position: relative;
+		font-family: $font-calibi;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: -126px;
+			bottom: -5px;
+			background: url("../img/agencies_cloud.png") 0 0 no-repeat;
+			width: 66px;
+			height: 30px;
+		}
+
+		.agencies_header__links__item {
+			color: #72787E;
+
+
+			&.m-region {
+				color: #72787E;
+				text-decoration: none;
+				display: inline-block;
+				margin-right: 7px;
+				border-bottom: 1px solid #72787E;
+
+				&:hover {
+					color: #ff7b10;
+					border-color: #ff7b10;
+				}
+			}
+
+			&.m-quantity {
+				display: inline-block;
+				padding-left: 10px;
+				border-left: 1px solid;
+			}
+		}
+
+	}
+}
+
+.agencies_abc {
+	float: right;
+	left: 35px;
+	width: 438px;
+	height: 171px;
+	display: none;
+	margin-top: 23px;
+	position: relative;
+
+
+	.agencies_abc__partial {
+		top: 0;
+		left: 0;
+		width: 382px;
+		height: 163px;
+		display: block;
+		position: absolute;
+		background-color: #f6f5f3;
+		border: 1px solid #dedddb;
+
+		&.agencies_abc__partial--up {
+			z-index: 4 !important;
+		}
+
+		.agencies_abc__text {
+			top: 50%;
+			right: 30px;
+			display: block;
+			color: #73797f;
+			font-size: 19px;
+			font-weight: 400;
+			line-height: 20px;
+			text-align: right;
+			position: absolute;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+			font-family: $font-calibi;
+		}
+
+		.agencies_abc__button {
+			left: auto;
+			width: 54px;
+			height: 58px;
+			right: -54px;
+			display: block;
+			cursor: pointer;
+			font-size: 27px;
+			line-height: 57px;
+			position: absolute;
+			text-align: center;
+			background-color: #f6f5f3;
+			border: 1px solid #dedddb;
+			font-family: $font-calibi;
+			border-radius: 0px 10px 10px 0;
+			border-left: 0;
+		}
+
+		&.agencies_abc__partial__a {
+			height: 163px;
+			z-index: 3;
+			border-radius: 10px 0 10px 10px;
+
+			.agencies_abc__button {
+				top: -1px;
+				color: #858c93;
+			}
+		}
+
+		&.agencies_abc__partial__b {
+			height: 167px;
+			z-index: 2;
+			border-radius: 10px;
+
+			.agencies_abc__button {
+				top: 56px;
+				color: #ffc000;
+			}
+		}
+
+		&.agencies_abc__partial__c {
+			height: 171px;
+			z-index: 1;
+			border-radius: 10px 10px 0 10px;
+
+			.agencies_abc__button {
+				top: 112px;
+				color: #fd9338;
+			}
+		}
+	}
+}
+
+.agencies_float_wrap {
+	width: 100%;
+	z-index: 999;
+	margin-top: -21px;
+}
+
+.agencies_float {
+	width: 100%;
+	z-index: 999;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: 15px;
+
+	.agencies_float__search_line {
+		padding: 0;
+		width: 100%;
+		display: block;
+		position: relative;
+		background-color: #fff;
+		border: 1px solid #dedddb;
+		font-family: Arial, Helvetica, sans-serif;
+
+		.agencies_header_search__icon {
+			display: block;
+			width: 13px;
+			height: 15px;
+			left: 15px;
+			top: 15px;
+			position: absolute;
+			background: url('../img/agencies_find.png') 0 0 no-repeat;
+			cursor: pointer;
+
+			&.m-wait {
+				background: url('../img/input_loader.gif') 0 0 no-repeat;
+				width: 18px;
+				height: 18px;
+				left: 13px;
+				top: 12px;
+
+			}
+
+			&.m-clear {
+				background: url('../img/close.png') 0 0 no-repeat;
+				width: 10px;
+				height: 10px;
+				left: 16px;
+				top: 16px;
+			}
+		}
+	}
+
+	.agencies_float__search__wrapper {
+		display: block;
+		vertical-align: middle;
+		padding: 0 10px 0 0;
+
+		.agencies_float__search {
+			width: 100%;
+			border: none;
+			outline: none;
+			color: #8c8c8c;
+			font-size: 15px;
+			text-indent: 40px;
+			line-height: 40px;
+		}
+	}
+
+	.agencies_float__menu {
+		display: block;
+		position: relative;
+		text-align: center;
+		padding-bottom: 10px;
+		font-family: Arial, Helvetica, sans-serif;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			line-height: 0;
+			list-style: none;
+
+			li {
+				color: #696969;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 20px;
+				padding: 0 8px 0 6px;
+				position: relative;
+				display: inline-block;
+
+				&:before {
+					top: 0;
+					right: 0;
+					content: '|';
+					color: #696969;
+					position: absolute;
+				}
+
+				&:last-child {
+
+					&:before {
+						display: none;
+					}
+
+				}
+
+				a {
+					color: #696969;
+					padding: 2px 0;
+					display: inline-block;
+
+					&:hover {
+						color: #ff7b10;
+					}
+				}
+			}
+		}
+
+	}
+
+	.header_nav {
+		width: 100%;
+		font-size: 0;
+		line-height: 0;
+		text-align: center;
+		position: relative;
+		background-color: #fff;
+		border-bottom: 1px solid #dedddb;
+		border-left: 1px solid #dedddb;
+		border-right: 1px solid #dedddb;
+		font-family: Arial, Helvetica, sans-serif;
+
+		&:after {
+			left: 0;
+			width: 100%;
+			height: 8px;
+			content: '';
+			bottom: -8px;
+			display: block;
+			position: absolute;
+			background: url('../img/scrolling_shadow_pattern.png') 0 0 repeat-x;
+		}
+
+		li {
+			margin: 0 7px;
+			color: #7d7d7d;
+			display: inline-block;
+
+			&.active {
+
+				a {
+					border-color: #ffd98d;
+				}
+			}
+		}
+
+		span {
+			padding: 4px 0;
+			font-size: 15px;
+			line-height: 20px;
+			display: inline-block;
+		}
+
+		a {
+			color: #7d7d7d;
+			font-size: 15px;
+			line-height: 20px;
+			padding: 19px 0 18px 0;
+			display: inline-block;
+			text-transform: uppercase;
+			border-bottom: 5px solid transparent;
+
+			&:hover {
+				border-color: #ffd98d;
+			}
+		}
+	}
+}
+
+
+@media (min-width: $screen-xs-min) {
+
+	.agencies_header__container {
+		padding: 17px 15px 0 15px;
+	}
+
+	.agencies_header__name {
+		width: 420px;
+
+		.agencies_header__age {
+			font-size: 30px;
+		}
+
+		.agencies_header__header {
+			font-size: 51px;
+
+			small {
+				font-size: 22px;
+			}
+		}
+	}
+
+	.header_nav {
+		height: 63px;
+	}
+
+
+}
+
+@media (min-width: 767px) {
+
+	.agencies_header {
+		margin-bottom: 105px;
+	}
+
+	.agencies_float_wrap {
+		left: 0;
+		right: 0;
+		top: 315px;
+		height: 53px;
+		margin-top: 0;
+		padding-top: 15px;
+		position: absolute;
+
+		&.fix_top {
+			top: 0;
+			left: 0;
+			right: 0;
+			position: fixed;
+			background: #f5f5f5;
+		}
+	}
+
+	.agencies_float {
+
+		.agencies_float__search_line {
+			display: table;
+		}
+
+		.agencies_float__search__wrapper {
+			height: 41px;
+			display: table-cell;
+		}
+
+		.agencies_float__menu {
+			height: 41px;
+			width: 420px;
+			padding-bottom: 0;
+			display: table-cell;
+			vertical-align: middle;
+
+			ul {
+
+				li {
+					padding: 0 13px 0 11px;
+				}
+			}
+
+			.agencies_float__menu_visible {
+				float: right;
+				margin-right: 40px;
+			}
+
+			.agencies_header__menu_close {
+				top: 0;
+				right: 0;
+				z-index: 10;
+				width: 45px;
+				height: 41px;
+				display: block;
+				cursor: pointer;
+				overflow: hidden;
+				position: absolute;
+				padding-right: 40px;
+				background-color: #fff;
+
+				&:before {
+					top: 0;
+					right: 0;
+					width: 45px;
+					height: 41px;
+					content: ' ';
+					position: absolute;
+					background: url("../img/agencies_burger.png") 0 0 no-repeat;
+				}
+
+				&:hover {
+					width: auto;
+					border-left: 1px solid #dedddb;
+
+					&:before {
+						background-position: 0 -45px;
+					}
+
+					ul {
+						display: block;
+					}
+				}
+
+				ul {
+					display: none;
+					padding: 8px 0;
+				}
+
+			}
+		}
+
+		.header_nav {
+
+			li {
+				margin: 0 10px;
+			}
+
+			span {
+				font-size: 17px;
+			}
+
+			a {
+				font-size: 17px;
+			}
+		}
+	}
+}
+
+
+@media (min-width: $screen-md-min) {
+
+	.agencies_header__name {
+		float: left;
+		margin: 14px 0 0 0;
+	}
+
+	.agencies_abc {
+		display: block;
+	}
+}

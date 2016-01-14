@@ -1,0 +1,41 @@
+
+$body-bg                :   #fff !default;
+$text-color             :   #787878 !default;
+$link-color             :   #0d80e6 !default;
+$link-hover-decoration  :   underline;
+
+
+$font-size-base         :   14px !default;
+$font-base              :   'Open Sans', Arial, sans-serif !default;
+$font-calibi            :   calibri, 'Calibri-Regular', sans-serif !default;
+
+
+
+//== Media queries breakpoints
+
+// Extra small screen / phone
+$screen-xs-min:              480px !default;
+
+// Small screen / tablet
+$screen-sm-min:              994px !default;
+
+// Medium screen / desktop
+$screen-md-min:              1366px !default;
+
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+
+
+
+// Small screen / tablet
+$container-sm:                 690px !default;
+
+// Medium screen / desktop
+$container-md:                 1050px !default;
+//** For `$screen-md-min` and up.
+
+// Large screen / wide desktop
+///$container-lg:                 1366px !default;
+

@@ -1,0 +1,96 @@
+.privileges {
+	padding-top: 40px;
+	background: #f5f5f5;
+
+	.privileges-wrap {
+		max-width: 674px;
+		margin: 0 auto;
+		padding: 0 15px;
+		font-size: 0;
+		line-height: 0;
+		text-align: center;
+	}
+
+
+	li {
+		width: 282px;
+		display: inline-block;
+		margin: 0 20px 40px 20px;
+
+		.privileges-item {
+			margin: 0 auto;
+			color: #8c8c8c;
+			font-size: 15px;
+			line-height: normal;
+			width: 100%;
+			background: #fff;
+			text-align: center;
+			border: 1px solid #dedddb;
+			padding: 140px 5px 25px 5px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.privileges-title {
+			color: #6d6d6d;
+			font-size: 19px;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+		}
+
+		&.item1 {
+
+			.privileges-item {
+				background: #fff url("../img/privileges-01.png") 50% 30px no-repeat;
+			}
+		}
+
+		&.item2 {
+
+			.privileges-item {
+				background: #fff url("../img/privileges-02.png") 50% 30px no-repeat;
+			}
+		}
+
+		&.item3 {
+
+			.privileges-item {
+				background: #fff url("../img/privileges-03.png") 50% 30px no-repeat;
+			}
+		}
+
+		&.item4 {
+
+			.privileges-item {
+				background: #fff url("../img/privileges-04.png") 50% 30px no-repeat;
+			}
+		}
+
+	}
+
+	@media (min-width: $screen-xs-min) {
+
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+
+	}
+
+	@media (min-width: $screen-md-min) {
+
+		.privileges-wrap {
+			width: 1318px;
+			padding: 0 15px;
+			max-width: inherit;
+		}
+
+		ul {
+			max-width: 100%;
+		}
+
+		li {
+
+		}
+
+	}
+}

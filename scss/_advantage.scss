@@ -1,0 +1,121 @@
+.advantage {
+	overflow: hidden;
+	position: relative;
+
+	.advantage-image {
+		display: none;
+	}
+
+	.advantage-text {
+
+		ol {
+			margin: 0;
+			color: #fff;
+			counter-reset:li;
+			list-style:none;
+			padding: 40px 15px 20px 15px;
+			text-shadow: -1px 1px 1px rgba(125, 125, 125, 0.75);
+			background: url("../img/advangage-bg-xs.jpg") 50% 0 no-repeat;
+			background-size: cover;
+		}
+
+		li {
+			font-size: 17px;
+			position:relative;
+			padding-left: 55px;
+			margin-bottom: 25px;
+
+			&:before {
+				top: 6px;
+				left: 0;
+				color:#fff;
+				width: 35px;
+				height: 35px;
+				padding: 5px 0;
+				font-size: 20px;
+				line-height: 25px;
+				font-weight: bold;
+				text-align: center;
+				position: absolute;
+				background: #ffd98d;
+				content: counter(li);
+				counter-increment: li;
+				font-family: Tahoma, Geneva, sans-serif;
+				text-shadow: -1px 1px 1px rgba(125, 125, 125, 0.75);
+			}
+		}
+
+		.text-gray {
+			margin-bottom: 10px;
+		}
+
+		.text-yellow {
+			color: #ffe5b2;
+		}
+	}
+
+	@media (min-width: $screen-xs-min) {
+
+		.advantage-text {
+
+			ol {
+				text-shadow: none;
+				padding: 40px 40px 20px 40px;
+			}
+
+			.order-line .order-inner {
+				width: auto;
+			}
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+		.advantage-image {
+			top: 0;
+			left: 0;
+			right: 55%;
+			bottom: 0;
+			display: block;
+			position: absolute;
+			border-right: 1px solid #d2d2d2;
+			background: url("../img/advangage-bg.jpg") 80% 0 no-repeat;
+		}
+
+		.advantage-text {
+
+			margin-left: 45%;
+			background: #fff;
+
+			ol {
+				color: #787878;
+				background: #fff;
+				padding: 33px 15px 10px 30px;
+
+				.text-yellow {
+					color: #d29b2e;
+				}
+			}
+		}
+
+	}
+
+	@media (min-width: $screen-md-min) {
+		height: 594px;
+
+		.advantage-image {
+			right: 50%;
+		}
+
+		.advantage-text {
+			margin-left: 50%;
+
+			ol {
+				width: 610px;
+				height: 559px;
+				overflow: hidden;
+				padding: 33px 15px 10px 30px;
+			}
+		}
+	}
+}

@@ -1,0 +1,105 @@
+.btn-yellow {
+	margin:0;
+	width: 196px;
+	height: 37px;
+	border: none;
+	outline: none;
+	padding: 5px 0;
+	color: #787878;
+	cursor: pointer;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 23px;
+	text-align: center;
+	position: relative;
+	background: #ffd98d;
+	display: inline-block;
+	text-decoration: none;
+	vertical-align: middle;
+	background-image: none;
+	touch-action: manipulation;
+	@include transition(.2s);
+	@include box-shadow(2px 2px 0px 0px rgba(212, 212, 212, 1));
+
+	&:hover {
+		background: #dbb66d;
+		text-decoration: none;
+	}
+}
+
+
+.btn-form {
+	margin: 0;
+	border: none;
+	outline: none;
+	color: #d29b2e;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17px;
+	padding: 10px 12px;
+	display: inline-block;
+	vertical-align: middle;
+	background: transparent;
+	text-decoration: underline;
+
+	&:hover {
+		color: #ff7b10;
+	}
+}
+
+
+.btn-orange {
+	margin: 0;
+	color: #fff;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	padding: 10px 15px;
+	background: #ff9742;
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	@include transition(.2s);
+	@include border-radius(4px);
+	text-shadow: 1px -1px 1px rgba(155, 155, 155, 0.75);
+	@include box-shadow(2px 2px 0px 0px rgba(212, 212, 212, 1));
+
+	&:hover {
+		background: #f17109;
+	}
+
+	@media (min-width: $screen-xs-min) {
+		font-size: 17px;
+	}
+}
+
+.btn-service {
+	margin: 0 0 0 20px;
+	color: #fff;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	padding: 5px 15px;
+	background: #f79447;
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	@include transition(.2s);
+	text-shadow: 1px -1px 1px rgba(155, 155, 155, 0.75);
+
+	&:hover {
+		background: #fc7914;
+	}
+
+	@media (min-width: $screen-xs-min) {
+		font-size: 15px;
+		padding: 5px 20px;
+	}
+}

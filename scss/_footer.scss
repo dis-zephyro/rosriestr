@@ -1,0 +1,38 @@
+.footer {
+	padding: 22px 0;
+
+	ul {
+		font-size: 0;
+		line-height: 0;
+		text-align: center;
+
+		li {
+			color: #787878;
+			padding: 0 17px 0 15px;
+			font-size: 14px;
+			line-height: 20px;
+			position: relative;
+			display: inline-block;
+
+			&:before {
+				top: 0;
+				right: 0;
+				content: '|';
+				color: #787878;
+				position: absolute;
+			}
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
