@@ -65,7 +65,7 @@
 	text-decoration: none;
 	@include transition(.2s);
 	@include border-radius(4px);
-	text-shadow: 1px -1px 1px rgba(155, 155, 155, 0.75);
+	text-shadow: 1px 1px 1px rgba(155, 155, 155, 1);
 	@include box-shadow(2px 2px 0px 0px rgba(212, 212, 212, 1));
 
 	&:hover {

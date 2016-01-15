@@ -114,7 +114,6 @@ $('.reply-slider').slick({
     autoplay: true,
     dots: true,
     mobileFirst: true,
-    autoplaySpeed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
@@ -148,19 +147,55 @@ $('.action-title li').click(function(e) {
 });
 
 
-$('.service-nav .service-item').click(function(e) {
-    e.preventDefault();
-    var tab = $($(this).attr("data-target"));
 
-    $('.service-description-line').find('li').removeClass('service-line-active');
-    $('.service-description-line').find(tab).addClass('service-line-active');
+
+
+$('.service-description').slick({
+    arrows: false,
+    autoplay: false,
+    dots: true,
+    mobileFirst: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
+
+$('.service-description').on('afterChange', function(event, slick, currentSlide){
+
+    var slide = '.item' + currentSlide;
+
+    $('.service-nav').find('li').removeClass('active');
+    $('.service-nav').find(slide).addClass('active');
+
+});
+
+
+$('.service-nav li').click(function(e) {
+    e.preventDefault();
 
     $('.service-nav').find('li').removeClass('active');
     $(this).closest('li').addClass('active');
-    $('.service-description').find('.service-tab').hide();
-    tab.show();
+
 });
 
+$('.service-nav li.item0').click(function(e) {
+    e.preventDefault();
+    $('.service-description').slick('slickGoTo', 0);
+});
+
+$('.service-nav li.item1').click(function(e) {
+    e.preventDefault();
+    $('.service-description').slick('slickGoTo', 1);
+});
+
+$('.service-nav li.item2').click(function(e) {
+    e.preventDefault();
+    $('.service-description').slick('slickGoTo', 2);
+});
+
+$('.service-nav li.item3').click(function(e) {
+    e.preventDefault();
+    $('.service-description').slick('slickGoTo', 3);
+});
 
 
 
@@ -177,4 +212,28 @@ $('.btn-reply-send').click(function(e){
     e.preventDefault();
     $('.reply-new').hide();
     $('.after-form').show();
+});
+
+
+// Auto complete
+
+$(function() {
+
+    var place = [
+        "Хабаровск / Хабаровский Край",
+        "Москва / Московская обл.",
+        "Волгоград / Волгоградская обл.",
+        "Рязянь /Рязанская обл."
+    ];
+
+
+    $('.place-complete').autocomplete({
+        source: place,
+        minLength: 0,
+        delay: 0
+    });
+    $('.place-complete').bind('focus', function() {
+        if ($(this).val() == '')
+            $(this).autocomplete('search', '');
+    });
 });

@@ -185,10 +185,10 @@
 
 	.after-form-phone {
 		width: 240px;
-		height: 47px;
-		padding: 11px 0;
+		height: 46px;
+		padding: 10px 0;
 		font-size: 22px;
-		line-height: 25px;
+		line-height: 22px;
 		background: #ffd98d;
 		border: 2px solid #ffd47d;
 		margin: 20px auto 30px auto;
@@ -213,12 +213,19 @@
 
 	.reply {
 
+		.reply-slide {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+
 		.reply-text {
 			font-size: 15px;
 		}
 	}
 
 	.reply-new  {
+		bottom: 0;
+		background: #f5f5f6;
 
 		.form-row {
 			margin: 0 -15px;
@@ -244,6 +251,11 @@
 			}
 
 		}
+	}
+
+	.after-form {
+		bottom: 0;
+		background: #f5f5f6;
 	}
 
 }
@@ -366,8 +378,7 @@
 
 		.reply-item {
 			min-height: 220px;
-			width: 1280px;
-			max-width: inherit;
+			max-width: 1280px;
 		}
 
 		.reply-text {

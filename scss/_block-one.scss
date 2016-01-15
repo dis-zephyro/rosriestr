@@ -11,7 +11,7 @@
 	}
 
 	.block-text {
-		padding: 10px 0;
+		padding: 25px 0;
 		font-size: 14px;
 		line-height: 17px;
 		background: #fff3db;
@@ -21,9 +21,6 @@
 			text-decoration: underline;
 		}
 
-		.col {
-			height: 113px;
-		}
 	}
 
 	.slider {
@@ -81,7 +78,7 @@
 			}
 
 			.bottom {
-				padding: 20px 0;
+				padding: 20px 15px;
 				text-align: center;
 				background: #ffd98d;
 
@@ -173,7 +170,6 @@
 			}
 		}
 
-
 		.slide-nav {
 			top: 35%;
 			width: 50px;
@@ -207,6 +203,10 @@
 
 	@media (min-width: $screen-xs-min) {
 
+		.block-text {
+			padding: 25px 25px;
+		}
+
 		.slider {
 
 			.col {
@@ -224,6 +224,10 @@
 				.slider-title {
 					font-size: 21px;
 					line-height: 23px;
+				}
+
+				.bottom {
+					padding: 25px 40px;
 				}
 			}
 		}
@@ -270,7 +274,7 @@
 				}
 
 				.bottom {
-					padding: 0;
+					padding: 0 40px;
 					text-align: center;
 					background: #ffd98d;
 
@@ -348,13 +352,26 @@
 
 	@media (min-width: $screen-md-min) {
 
+		.block-text {
+			padding: 25px 0;
+		}
+
 		.slider {
 
 			.slider-item {
 
 				.slider-text {
 					padding: 0 65px 0 85px;
-					width: 640px;
+
+				}
+
+				.slider-text-inner {
+					max-width: 540px;
+					margin: 0 auto;
+				}
+
+				.bottom {
+					padding: 0;
 				}
 			}
 		}

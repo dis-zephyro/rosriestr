@@ -110,7 +110,7 @@
 		font-family: $font-calibi;
 
 		&:hover {
-			background: #f3b600;
+			background: #ffd34d;
 		}
 	}
 
@@ -155,15 +155,18 @@
 	padding: 40px 0;
 	background: #f5f5f5;
 
-	@media (min-width: $screen-md-min) {
+	@media (min-width: $screen-xs-min) {
+		padding: 40px 25px;
+	}
 
-		padding: 40px 0;
+	@media (min-width: $screen-sm-min) {
+
+		padding: 40px 25px;
 	}
 
 	@media (min-width: $screen-md-min) {
 
 		padding: 55px 0;
-		height: 306px;
 	}
 }
 
@@ -183,35 +186,28 @@
 		font-size: 17px;
 
 		.block-three-wrap {
-			padding-left: 30px;
-			padding-right: 30px;
+			padding-left: 40px;
+			padding-right: 40px;
 		}
 
 	}
 
 	@media (min-width: $screen-sm-min) {
-		padding: 0;
+		padding: 60px 0;
 		background: url("../img/block_three_bg.png") 50% 50% no-repeat;
 
-		.col {
-			height: 373px;
-		}
 
 		.block-three-wrap {
-			max-width: 1050px;
-			padding-left: 50px;
-			padding-right: 50px;
+			margin-left: 50%;
 		}
 
 		.block-three-text {
-			margin-left: 50%;
 			padding-left: 20px;
+			padding-right: 50px;
 		}
 	}
 
 	@media (min-width: $screen-md-min) {
-
-
 
 		.block-three-wrap {
 			padding-left: 15px;
@@ -219,8 +215,9 @@
 		}
 
 		.block-three-text {
-			margin-left: 50%;
-			padding-left: 60px;
+			max-width: 500px;
+			padding-left: 20px;
+			margin: 0 auto;
 		}
 	}
 }
@@ -236,12 +233,18 @@
 		padding: 0 15px;
 	}
 
+	@media (min-width: $screen-xs-min) {
+
+		.block-four-wrap {
+			padding: 0 40px;
+		}
+	}
+
 	@media (min-width: $screen-sm-min) {
 		height: 252px;
 
 		.block-four-wrap {
 			max-width: 870px;
-			padding: 0 25px;
 
 			span {
 				display: block;
@@ -252,20 +255,26 @@
 	@media (min-width: $screen-md-min) {
 
 		.block-four-wrap {
-
+			padding: 0 15px;
 		}
 	}
 }
 
 
 .block-order {
-	padding-top: 40px;
-	padding-bottom: 40px;
 	background: #f5f5f5;
+
+	.block-order-inner {
+
+	}
+
+	.block-order-bg {
+		display: none;
+	}
 
 	.block-order-wrap {
 		margin: 0 auto;
-		padding: 0 10px;
+		padding: 40px 15px;
 	}
 
 	.block-order-form {
@@ -286,30 +295,57 @@
 	}
 
 	@media (min-width: $screen-xs-min) {
-		height: 454px;
 
-		.block-order-form {
-			padding: 0 40px;
+
+		.block-order-wrap {
+			margin: 0 auto;
+			padding: 40px 40px;
 		}
 	}
 
 	@media (min-width: $screen-sm-min) {
 
-		background: #f5f5f5 url("../img/block_seo_bg.png") 50% 0 no-repeat;
+		.block-order-inner {
+			width: 100%;
+			display: table;
+			position: relative;
 
-		&.block-reg {
-			background: #f5f5f5 url("../img/block_reg_agen.png") 0 0 no-repeat;
+			&:before {
+				left: 35%;
+				bottom: 0;
+				content: ' ';
+				width: 163px;
+				height: 295px;
+				z-index: 200;
+				position: absolute;
+				background: url("../img/goal.png") 0 0 no-repeat;
+			}
+		}
+
+		.block-order-bg {
+			width: 50%;
+			display: table-cell;
+			background: #f5f5f5 url("../img/block_seo_sm_bg.png") 100% 100% no-repeat;
 		}
 
 		.block-order-wrap {
-			padding: 0 30px;
-			max-width: 990px;
+			width: 50%;
+			display: table-cell;
+			padding: 40px 30px;
+		}
+
+
+		&.block-reg {
+
+			.block-order-bg {
+				display: table-cell;
+				background: #f5f5f5 url("../img/block_reg_agen.png") -170px 100% no-repeat;
+			}
 		}
 
 		.block-order-form {
-			margin: 0;
+			margin: 0 auto;
 			padding: 0;
-			float: right;
 			width: 356px;
 			max-width: inherit;
 		}
@@ -318,14 +354,22 @@
 	@media (min-width: $screen-md-min) {
 
 		.block-order-wrap {
-			width: 1084px;
-			padding: 0 30px;
+			padding: 40px 30px;
 			max-width: inherit;
 		}
 
+
+		&.block-reg {
+
+			.block-order-bg {
+				display: table-cell;
+				background: #f5f5f5 url("../img/block_reg_agen.png") 0 100% no-repeat;
+			}
+		}
+
 		.block-order-form {
-			margin: 0;
-			float: right;
+			width: auto;
+			max-width: 400px;
 		}
 	}
 }

@@ -24,12 +24,44 @@
 	&.error {
 		border-color: #de8446;
 	}
+
+	&.form-complete {
+		background: #fff url("../img/icon-select.png") right 0 top 18px no-repeat;
+	}
 }
 
 textarea.form-control {
 	height: 94px;
 }
 
+
+.ui-autocomplete {
+
+	margin: -2px 0 0 0;
+	padding: 0;
+	list-style: none;
+	border: 2px solid #ffd47d;
+
+	.ui-menu-item {
+		color: #8c8c8c;
+		cursor: pointer;
+		margin: 0 !important;
+		display: block !important;
+		font-size: 14px !important;
+		background: #fff;
+		line-height: 17px !important;
+		padding: 10px 12px !important;
+
+		&:hover {
+			background: #ffdd97;
+		}
+
+		&:first-child {
+
+		}
+
+	}
+}
 
 .select-control {
 	margin: 0;
@@ -52,37 +84,6 @@ textarea.form-control {
 
 	.ik_select_link_text {
 		overflow: hidden;
-	}
-}
-
-.ik_select_dropdown {
-
-	.ik_select_list_inner {
-
-		ul {
-			margin: -2px 0 0 0;
-			padding: 0;
-			list-style: none;
-			border: 2px solid #ffd47d;
-
-			li {
-				color: #8c8c8c;
-				cursor: pointer;
-				font-size: 14px;
-				background: #fff;
-				line-height: 17px;
-				padding: 10px 12px;
-
-				&:hover {
-					background: #ffdd97;
-				}
-
-				&:first-child {
-
-				}
-
-			}
-		}
 	}
 }
 
