@@ -154,9 +154,19 @@ $('.service-description').slick({
     arrows: false,
     autoplay: false,
     dots: true,
+    fade: false,
+    cssEase: 'linear',
     mobileFirst: true,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1365,
+            settings: {
+                fade: true
+            }
+        }
+    ]
 });
 
 $('.service-description').on('afterChange', function(event, slick, currentSlide){

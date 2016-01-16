@@ -48,6 +48,7 @@
 				margin: 0 auto;
 				padding: 0 10px;
 				max-width: 530px;
+				text-align: center;
 				text-shadow: -1px 1px 1px rgba(125, 125, 125, 0.75);
 			}
 
@@ -58,6 +59,7 @@
 				min-height: 70px;
 				position: relative;
 				margin-bottom: 30px;
+				text-align: left;
 				text-transform: uppercase;
 
 				&:before {
@@ -261,6 +263,7 @@
 				}
 
 				.slider-text {
+					text-align: left;
 					color: #6d6d6d;
 					margin: 0 auto;
 					max-width: inherit;

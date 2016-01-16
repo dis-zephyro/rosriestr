@@ -63,6 +63,33 @@ textarea.form-control {
 	}
 }
 
+.ik_select_dropdown {
+	margin: -2px 0 0 0;
+
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		border: 2px solid #ffd47d;
+
+		li {
+			color: #8c8c8c;
+			cursor: pointer;
+			margin: 0 !important;
+			display: block !important;
+			font-size: 14px !important;
+			background: #fff;
+			line-height: 17px !important;
+			padding: 10px 12px !important;
+
+			&:hover {
+				background: #ffdd97;
+			}
+		}
+	}
+}
+
 .select-control {
 	margin: 0;
 	width: 100%;

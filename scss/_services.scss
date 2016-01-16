@@ -233,6 +233,7 @@
 		.service-description {
 			margin: 0 auto;
 			width: 1248px;
+			overflow: hidden;
 
 			.service-tab {
 
@@ -255,6 +256,33 @@
 				li {
 					width: 282px;
 					margin: 0 20px;
+				}
+			}
+
+			.slick-dots {
+				top:0;
+				left: -20px;
+				right: -20px;
+				font-size: 0;
+				line-height: 0;
+				position: absolute;
+				background: #ffd98d;
+
+				li {
+					width: 282px;
+					float: left;
+					margin: 0 20px;
+
+					button {
+						margin: 0;
+						padding: 0;
+						border: none;
+						outline: none;
+					}
+
+					&.slick-active {
+						background: #f79447;
+					}
 				}
 			}
 		}
