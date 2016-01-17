@@ -111,6 +111,7 @@ $( document ).ready(function() {
             arrows: false,
             autoplay: true,
             dots: true,
+            adaptiveHeight: true,
             mobileFirst: true,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -129,6 +130,21 @@ $( document ).ready(function() {
 
         $('.btn-reply').click(function(){
             $('.reply-new').show();
+        });
+
+        $('.btn-form-reset').click(function(){
+            $('.reply-new').hide();
+        });
+
+        $('.btn-form-close').click(function(){
+            $('.after-form').hide();
+        });
+
+// Удалить!!!!!
+        $('.btn-reply-send').click(function(e){
+            e.preventDefault();
+            $('.reply-new').hide();
+            $('.after-form').show();
         });
 
 
@@ -150,7 +166,6 @@ $( document ).ready(function() {
             dots: true,
             fade: false,
             adaptiveHeight: true,
-            cssEase: 'step-end',
             mobileFirst: true,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -158,7 +173,10 @@ $( document ).ready(function() {
                 {
                     breakpoint: 1365,
                     settings: {
-                        fade: true
+                        fade: true,
+                        speed: 10,
+                        cssEase: 'step-end',
+                        easing: 'step-end'
                     }
                 }
             ]
@@ -204,20 +222,6 @@ $( document ).ready(function() {
 
 
 
-        $('.btn-form-reset').click(function(){
-            $('.reply-new').hide();
-        });
-
-        $('.btn-form-close').click(function(){
-            $('.after-form').hide();
-        });
-
-// Удалить!!!!!
-        $('.btn-reply-send').click(function(e){
-            e.preventDefault();
-            $('.reply-new').hide();
-            $('.after-form').show();
-        });
 
 
 // Auto complete

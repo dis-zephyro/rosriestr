@@ -47,6 +47,20 @@
 				text-align: center;
 				text-transform: uppercase;
 				text-shadow: 1px -1px 1px rgba(155, 155, 155, 0.75);
+
+				.old {
+					display: inline-block;
+					position: relative;
+
+					&:before {
+						top: 50%;
+						left: 0;
+						right: 0;
+						content: ' ';
+						position: absolute;
+						border-top: 1px solid #fff;
+					}
+				}
 			}
 
 			&.item0 {
@@ -176,7 +190,7 @@
 			line-height: 20px;
 			position: relative;
 
-			border-bottom: 2px solid #dedddb;
+			border-bottom: 1px solid #dedddb;
 
 			.service-tab-title {
 				font-size: 18px;
