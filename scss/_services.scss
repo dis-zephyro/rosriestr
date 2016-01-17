@@ -1,5 +1,5 @@
 .service {
-	padding: 40px 0;
+	padding: 40px 0 0 0;
 
 	.service-wrap {
 		max-width: 684px;
@@ -166,11 +166,16 @@
 			}
 		}
 
+		.service-slide {
+			padding-bottom: 40px;
+		}
+
 		.service-tab {
 			font-size: 16px;
 			height: 100%;
 			line-height: 20px;
 			position: relative;
+
 			border-bottom: 2px solid #dedddb;
 
 			.service-tab-title {

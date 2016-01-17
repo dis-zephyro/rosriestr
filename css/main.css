@@ -662,8 +662,10 @@ label {
   background: #ff7b10;
   font-family: calibri, "Calibri-Regular", sans-serif; }
   .order-line .order-inner {
+    display: block;
     margin: 0 auto;
-    max-width: 560px; }
+    max-width: 560px;
+    position: relative; }
   .order-line .order-line-link {
     color: #fff;
     display: block;
@@ -672,10 +674,13 @@ label {
     line-height: 17px;
     position: relative;
     text-decoration: none;
+    vertical-align: middle;
     text-transform: uppercase;
-    padding: 9px 20px 9px 45px; }
-    .order-line .order-line-link:hover:after {
-      background-position: 0 0; }
+    padding: 9px 20px 9px 50px; }
+    .order-line .order-line-link:hover {
+      background: #f58326; }
+      .order-line .order-line-link:hover:after {
+        background-position: 0 0; }
     .order-line .order-line-link:before {
       top: 0;
       left: 0;
@@ -699,17 +704,21 @@ label {
       border-radius: 2px;
       background: #fff url("../img/icon-checkbox.png") 0 -100px no-repeat; }
   .order-line .order-button {
+    top: 0;
+    right: 16px;
     color: #fff;
-    width: 182px;
+    width: 170px;
     height: 35px;
     border: none;
     outline: none;
     display: none;
-    font-size: 15px;
+    position: absolute;
+    font-size: 16px;
     line-height: 17px;
     padding: 9px 10px;
     text-align: center;
     background: #ffc000;
+    vertical-align: middle;
     text-decoration: none;
     text-transform: uppercase;
     font-family: calibri, "Calibri-Regular", sans-serif; }
@@ -717,14 +726,14 @@ label {
       background: #ffd34d; }
   @media (min-width: 994px) {
     .order-line .order-inner {
-      width: 744px;
+      width: 746px;
       max-width: inherit; }
     .order-line .order-line-link {
-      float: left;
-      width: 562px;
+      height: 35px;
+      width: 746px;
+      font-size: 16px;
       max-width: inherit; }
     .order-line .order-button {
-      float: right;
       display: block; } }
 
 .head-line {
@@ -1422,7 +1431,8 @@ label {
         .advantage .advantage-text ol .text-yellow {
           color: #d29b2e; }
     .advantage .order-line .order-line-link {
-      width: 100%; } }
+      width: 100%;
+      font-size: 15px; } }
   @media (min-width: 1366px) {
     .advantage {
       height: 594px; }
@@ -1435,7 +1445,10 @@ label {
           height: 559px;
           margin: 0 auto;
           overflow: hidden;
-          padding: 33px 15px 10px 30px; } }
+          padding: 33px 15px 10px 30px; }
+      .advantage .order-line .order-line-link {
+        width: 100%;
+        font-size: 16px; } }
 
 .footer {
   padding: 22px 0; }
@@ -1970,7 +1983,7 @@ label {
       text-align: justify; } }
 
 .service {
-  padding: 40px 0; }
+  padding: 40px 0 0 0; }
   .service .service-wrap {
     max-width: 684px;
     margin: 0 auto;
@@ -2062,6 +2075,8 @@ label {
           outline: none; }
         .service .service-description .slick-dots li.slick-active {
           background: #f79447; }
+    .service .service-description .service-slide {
+      padding-bottom: 40px; }
     .service .service-description .service-tab {
       font-size: 16px;
       height: 100%;
