@@ -108,9 +108,9 @@ $( document ).ready(function() {
 
 
         $('.reply-slider').slick({
-            arrows: false,
             autoplay: true,
             dots: true,
+            arrows: false,
             adaptiveHeight: true,
             mobileFirst: true,
             slidesToShow: 1,
