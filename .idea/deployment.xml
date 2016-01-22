@@ -149,6 +149,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="gallery">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="ikra">
         <serverdata>
           <mappings>

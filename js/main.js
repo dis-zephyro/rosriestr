@@ -145,8 +145,13 @@ $( document ).ready(function() {
             e.preventDefault();
             $('.reply-new').hide();
             $('.after-form').show();
-        });
+        }); //
 
+        $('.btn-action-send').click(function(e){
+            e.preventDefault();
+            $(this).closest('.action-form').hide();
+            $(this).closest('.action-tab').find('.after-action').show();
+        });
 
 // Tabs
 
@@ -159,6 +164,14 @@ $( document ).ready(function() {
             $('.action-content').find('.action-tab').hide();
             tab.show();
         });
+
+        $('.btn-form-back').click(function(e) {
+            e.preventDefault();
+
+            $('.action-content').find('.action-tab').hide();
+            $('.action-content .support').show();
+        });
+
 
         $('.service-description').slick({
             arrows: false,
@@ -221,7 +234,25 @@ $( document ).ready(function() {
         });
 
 
+// warranty
 
+        $('.warranty-btn').click(function(e) {
+            e.preventDefault();
+            var tab = $($(this).attr("data-target"));
+            $('.warranty-head').find('.warranty-btn').removeClass('active');
+            $(this).addClass('active');
+
+            $('.warranty').find('.warranty-tab').hide();
+            tab.show();
+        });
+
+
+
+        $('.header_nav li a').click(function(){
+            var str=$(this).attr('href');
+            $.scrollTo(str, 500, {offset:-120 });
+            return false;
+        });
 
 
 // Auto complete
@@ -249,6 +280,7 @@ $( document ).ready(function() {
 
 
     })();
+
 
     myCode;
 });

@@ -49,30 +49,69 @@
 		padding: 30px 0;
 	}
 
+	.region {
+		color: #787878;
+		font-size: 17px;
+		margin: 0 0 20px;
+	}
+
+	.action-tab {
+		display: none;
+		position: relative;
+	}
+
+	.support-phone {
+		width: 240px;
+		height: 46px;
+		padding: 10px 0;
+		font-size: 22px;
+		line-height: 22px;
+		background: #ffd98d;
+		border: 2px solid #ffd47d;
+		margin: 25px auto 25px auto;
+	}
+
 	.support {
+		display: block;
 		margin: 0 auto;
 		padding: 0 20px;
 		max-width: 570px;
 		text-align: center;
-
-		.support-phone {
-			width: 240px;
-			height: 46px;
-			padding: 10px 0;
-			font-size: 22px;
-			line-height: 22px;
-			background: #ffd98d;
-			border: 2px solid #ffd47d;
-			margin: 25px auto 25px auto;
-		}
 	}
 
 	.more-action {
-		display: none;
 		margin: 0 auto;
 		padding: 0 20px;
 		max-width: 850px;
 		text-align: center;
+	}
+
+	.action-form {
+		margin: 0 auto;
+		max-width: 744px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		.form-row {
+			@include clearfix();
+
+			.form-col {
+
+			}
+
+			.form-col-40 {
+
+			}
+
+			.form-col-60 {
+				color: #d29b2e;
+			}
+		}
+	}
+
+	.after-action {
+		text-align: center;
+		display: none;
 	}
 
 	@media (min-width: $screen-xs-min) {
@@ -91,5 +130,74 @@
 		.more-action {
 			text-align: justify;
 		}
+
+		.action-form {
+			.form-row {
+				margin: 0 -15px;
+				@include clearfix();
+
+				.form-col {
+					float: left;
+					width: 50%;
+					padding: 0 15px;
+
+					&.form-col100 {
+						width: 100%;
+					}
+				}
+
+				.form-col-30 {
+					float: left;
+					width: 33.33%;
+					padding: 0 15px;
+				}
+
+				.form-col-40 {
+					padding: 0 15px;
+				}
+
+				.form-col-60 {
+					padding: 0 15px;
+					text-align: right;
+				}
+
+			}
+		}
+	}
+
+	@media (min-width: 600px) {
+
+		.action-form {
+
+			.form-row {
+
+				.form-col {
+					float: left;
+					width: 33.33%;
+					padding: 0 15px;
+
+					&.form-col100 {
+						width: 33.33%;
+					}
+				}
+
+				.form-col-40 {
+					width: 40%;
+					float: left;
+					padding: 0 15px;
+				}
+
+				.form-col-60 {
+					width: 60%;
+					float: left;
+					padding: 0 15px;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screen-sm-min){
+
 	}
 }
