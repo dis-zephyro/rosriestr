@@ -1,3 +1,15 @@
+
+.action-block-title {
+
+	span {
+		display: none;
+
+		&.support {
+			display: block;
+		}
+	}
+}
+
 .action {
 	background: #fff3db;
 

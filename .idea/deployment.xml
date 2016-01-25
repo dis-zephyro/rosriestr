@@ -149,6 +149,20 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="ftp.moscow-rem.ru">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ftp.moscow-rem.ru (1)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="gallery">
         <serverdata>
           <mappings>
@@ -178,6 +192,13 @@
         </serverdata>
       </paths>
       <paths name="livebiz">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lp_ege">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

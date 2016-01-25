@@ -910,6 +910,29 @@ label {
 .mb25 {
   margin-bottom: 25px; }
 
+.map-block {
+  border-top: 1px solid #dfdedc;
+  border-bottom: 1px solid #dfdedc; }
+  .map-block #map {
+    height: 292px; }
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg#greyscale);
+  /* Firefox 4+ */
+  filter: gray;
+  /* IE 6-9 */ }
+  .grayscale:hover {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: none; }
+
 .block-one .top {
   padding: 5px 0;
   text-align: center;
@@ -1792,20 +1815,11 @@ label {
     border-left: 1px solid #dedddb;
     border-right: 1px solid #dedddb;
     font-family: Arial, Helvetica, sans-serif; }
-    .agencies_float .header_nav:after {
-      left: 0;
-      width: 100%;
-      height: 8px;
-      content: '';
-      bottom: -8px;
-      display: block;
-      position: absolute;
-      background: url("../img/scrolling_shadow_pattern.png") 0 0 repeat-x; }
     .agencies_float .header_nav li {
       margin: 0 7px;
       color: #7d7d7d;
       display: inline-block; }
-      .agencies_float .header_nav li.active a {
+      .agencies_float .header_nav li a.cur {
         border-color: #ffd98d; }
     .agencies_float .header_nav span {
       padding: 4px 0;
@@ -1854,16 +1868,26 @@ label {
       top: 0;
       left: 0;
       right: 0;
+      height: 59px;
       position: fixed;
-      background: #f5f5f5; }
+      background: url("../img/agencies_city.png") 0 100% repeat-x; }
+      .agencies_float_wrap.fix_top .header_nav:after {
+        left: 0;
+        width: 100%;
+        height: 8px;
+        content: '';
+        bottom: -8px;
+        display: block;
+        position: absolute;
+        background: url("../img/scrolling_shadow_pattern.png") 0 0 repeat-x; }
 
   .agencies_float .agencies_float__search_line {
     display: table; }
   .agencies_float .agencies_float__search__wrapper {
-    height: 41px;
+    height: 42px;
     display: table-cell; }
   .agencies_float .agencies_float__menu {
-    height: 41px;
+    height: 42px;
     width: 420px;
     padding-bottom: 0;
     display: table-cell;
@@ -1878,7 +1902,7 @@ label {
       right: 0;
       z-index: 10;
       width: 45px;
-      height: 41px;
+      height: 42px;
       display: block;
       cursor: pointer;
       overflow: hidden;
@@ -1889,7 +1913,7 @@ label {
         top: 0;
         right: 0;
         width: 45px;
-        height: 41px;
+        height: 42px;
         content: ' ';
         position: absolute;
         background: url("../img/agencies_burger.png") 0 0 no-repeat; }
@@ -1971,6 +1995,11 @@ label {
     padding: 0 10px; }
   .special .btn-orange {
     padding: 10px 90px; } }
+.action-block-title span {
+  display: none; }
+  .action-block-title span.support {
+    display: block; }
+
 .action {
   background: #fff3db; }
   .action .action-title {
@@ -2241,12 +2270,17 @@ label {
     background: #ececec;
     position: relative; }
     .warranty .warranty-tab.agency {
-      display: none; }
+      display: none;
+      background: url("../img/agency-bg-xs.jpg") 0% no-repeat;
+      background-size: cover; }
+    .warranty .warranty-tab.private {
+      background: url("../img/advangage-bg-xs.jpg") 0% no-repeat;
+      background-size: cover; }
     .warranty .warranty-tab .warranty-image {
       display: none; }
     .warranty .warranty-tab .warranty-text ol {
       margin: 0;
-      color: #787878;
+      color: #fff;
       counter-reset: li;
       list-style: none;
       padding: 40px 15px 20px 15px; }
@@ -2255,7 +2289,8 @@ label {
       line-height: normal;
       position: relative;
       padding-left: 55px;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      text-shadow: 0px 1px 1px rgba(162, 162, 162, 0.75); }
       .warranty .warranty-tab .warranty-text li:before {
         top: 6px;
         left: 0;
@@ -2284,6 +2319,8 @@ label {
         color: #d29b2e;
         text-decoration: underline; }
   @media (min-width: 660px) {
+    .warranty .warranty-head .warranty-title {
+      margin-bottom: 0; }
     .warranty .warranty-head .warranty-head-inner {
       max-width: 660px; }
     .warranty .warranty-head .warranty-btn {
@@ -2295,9 +2332,13 @@ label {
       .warranty .warranty-head .warranty-btn.warranty-btn-right {
         right: 15px; } }
   @media (min-width: 994px) {
-    .warranty .warranty-tab.agency .warranty-image {
-      background: url("../img/agency-bg.jpg") 50% 0 no-repeat;
-      background-size: cover; }
+    .warranty .warranty-tab.agency {
+      background: #ececec; }
+      .warranty .warranty-tab.agency .warranty-image {
+        background: url("../img/agency-bg.jpg") 50% 0 no-repeat;
+        background-size: cover; }
+    .warranty .warranty-tab.private {
+      background: #ececec; }
     .warranty .warranty-tab .warranty-image {
       top: 0;
       left: 0;
@@ -2310,7 +2351,20 @@ label {
     .warranty .warranty-tab .warranty-text {
       margin-left: 45%; }
       .warranty .warranty-tab .warranty-text ol {
-        padding: 33px 15px 10px 30px; } }
+        color: #787878;
+        padding: 33px 15px 10px 30px; }
+      .warranty .warranty-tab .warranty-text li {
+        text-shadow: none; }
+      .warranty .warranty-tab .warranty-text .text-gray {
+        margin-bottom: 10px; }
+        .warranty .warranty-tab .warranty-text .text-gray a {
+          color: #787878;
+          text-decoration: underline; }
+      .warranty .warranty-tab .warranty-text .text-yellow {
+        color: #d29b2e; }
+        .warranty .warranty-tab .warranty-text .text-yellow a {
+          color: #d29b2e;
+          text-decoration: underline; } }
   @media (min-width: 1366px) {
     .warranty .warranty-tab.agency .warranty-image {
       background: url("../img/agency-bg.jpg") 50% 0 no-repeat;

@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="js/vendor/jquery.fancybox/jquery.fancybox.css">
         <link rel="stylesheet" href="js/vendor/jquery-ui/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="js/vendor/wow.js/animate.min.css">
         <link rel="stylesheet" href="css/main.css">
 
         <!--[if lt IE 9]>
@@ -21,6 +22,8 @@
     </head>
     
     <body>
+
+    <div class="landingItem"  id="one">
         <header class="agencies_header">
 
             <div class="agencies_header__container">
@@ -107,9 +110,9 @@
                     </div>
                 </div>
 
-                <nav class="header_nav">
+                <nav class="header_nav scroll-nav">
                     <ul class="clearfix">
-                        <li class="active"><a href="#one">О справочнике</a></li>
+                        <li><a href="#one" class="cur">О справочнике</a></li>
                         <li><a href="#two">Гарантии</a></li>
                         <li><a href="#three">Команда РосРиелт</a></li>
                         <li><a href="#four">контакты</a></li>
@@ -118,7 +121,7 @@
             </div>
         </div>
 
-        <div class="about-block" id="one">
+        <div class="about-block">
             <div class="wrap">
                 РосРиелт - это единый специализированный справочник агентств недвижимости всего Забайкальского края, в котором
                 собирается вся информация об агентствах недвижимости нашего региона. Справочник предназначен
@@ -159,7 +162,10 @@
             </div>
         </div>
 
-        <div class="warranty" id="two">
+    </div>
+
+    <div class="landingItem"  id="two">
+        <div class="warranty">
             <div class="warranty-head">
                 <div class="warranty-head-inner">
                     <span class="warranty-title">ГАРАНТИИ</span>
@@ -217,9 +223,11 @@
                 в тенденциях рынка и открывать для Вас новые возможности.
             </div>
         </div>
+    </div>
 
+    <div class="landingItem"  id="three">
         <!-- блок команды -->
-        <div class="command-blocks-inner" id="three">
+        <div class="command-blocks-inner">
             <div class="command-blocks">
                 <a href="#" class="ws_next"></a>
                 <a href="#" class="ws_prev"></a>
@@ -341,46 +349,46 @@
         <div class="work-block">
             <div class="work-block-container">
                 <ul class="clearfix">
-                    <li class="work-left">
+                    <li class="work-left wow fadeInUp">
                         <div class="work-text">Обновляем данные по агентствам недвижимости</div>
                         <div class="work-image">
-                            <img class="img-responsive" src="img/work-block-image-01.jpg" alt="">
+                            <img class="img-responsive grayscale" src="img/work-block-image-01.jpg" alt="">
                         </div>
                     </li>
-                    <li class="work-right">
+                    <li class="work-right wow fadeInUp">
                         <div class="work-image">
-                            <img class="img-responsive" src="img/work-block-image-02.jpg" alt="">
+                            <img class="img-responsive grayscale" src="img/work-block-image-02.jpg" alt="">
                         </div>
                         <div class="work-text">Отслеживаем доставку объявлений во все агентства</div>
                     </li>
                 </ul>
 
                 <ul class="clearfix">
-                    <li class="work-left">
+                    <li class="work-left wow fadeInUp">
                         <div class="work-text">Разрабатываем инструменты по автоматизации работы агентств недвижимости</div>
                         <div class="work-image">
-                            <img class="img-responsive" src="img/work-block-image-03.jpg" alt="">
+                            <img class="img-responsive grayscale" src="img/work-block-image-03.jpg" alt="">
                         </div>
                     </li>
-                    <li class="work-right">
+                    <li class="work-right wow fadeInUp">
                         <div class="work-image">
-                            <img class="img-responsive" src="img/work-block-image-04.jpg" alt="">
+                            <img class="img-responsive grayscale" src="img/work-block-image-04.jpg" alt="">
                         </div>
                         <div class="work-text">Проводим маркетинговые исследования рынка недвижимости</div>
                     </li>
                 </ul>
 
                 <ul class="clearfix">
-                    <li class="work-left">
+                    <li class="work-left wow fadeInUp">
                         <div class="work-text">
                             Поддерживаем стабильную работу сервиса росриелт</div>
                         <div class="work-image">
-                            <img class="img-responsive" src="img/work-block-image-05.jpg" alt="">
+                            <img class="img-responsive grayscale" src="img/work-block-image-05.jpg" alt="">
                         </div>
                     </li>
-                    <li class="work-right">
+                    <li class="work-right wow fadeInUp">
                         <div class="work-image">
-                            <img class="img-responsive" src="img/work-block-image-06.jpg" alt="">
+                            <img class="img-responsive grayscale" src="img/work-block-image-06.jpg" alt="">
                         </div>
                         <div class="work-text">Отвечаем на вопросы пользователей справочника</div>
                     </li>
@@ -389,9 +397,15 @@
                 <a class="btn-orange-long" href="#">ПЕРЕЙТИ В СПРАВОЧНИК АГЕНТСТВ НЕДВИЖИМОСТИ</a>
             </div>
         </div>
+    </div>
 
-        <div class="about-block big-work-text" id="four">
-            <div class="wrap">НАШИ КОНТАКТЫ</div>
+    <div class="landingItem"  id="four">
+        <div class="about-block big-work-text">
+            <div class="wrap action-block-title">
+                <span class="support">НАШИ КОНТАКТЫ</span>
+                <span class="question-new">Задать вопрос</span>
+                <span class="review-new">Оставить отзыв</span>
+            </div>
         </div>
         <section class="action">
             <div class="action-content">
@@ -512,6 +526,12 @@
                 </ul>
             </div>
         </section>
+        <section class="map-block">
+            <div id="map"></div>
+        </section>
+    </div>
+
+
         <footer class="footer">
             <ul class="clearfix">
                 <li>© Функционал запатентован Роспатент 2014-2015</li>
@@ -522,9 +542,12 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script src="js/vendor/jquery.fancybox/jquery.fancybox.pack.js"></script>
         <script src="js/vendor/jquery-ui/jquery-ui.min.js"></script>
         <script src="js/vendor/slick/slick.min.js"></script>
+        <script src="js/vendor/wow.js/wow.min.js"></script>
+        <script src="js/vendor/liLanding/jquery.liLanding.js"></script>
         <script src="js/vendor/jquery.ikSelect.min.js"></script>
         <script src="js/vendor/jquery.scrollTo.min.js"></script>
         <script src="js/main.js"></script>
