@@ -1871,6 +1871,7 @@ label {
       right: 0;
       height: 58px;
       position: fixed;
+      border-bottom: 1px solid #dddcda;
       background: url("../img/agencies_city.png") 0 100% repeat-x; }
       .agencies_float_wrap.fix_top .header_nav:after {
         left: 0;
