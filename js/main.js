@@ -299,7 +299,16 @@ $( document ).ready(function() {
         }
 
 
-        $('.scroll-nav').liLanding();
+        $('.scroll-nav').liLanding({
+        });
+
+        $('.scroll-nav li a').click(function(){
+            var str=$(this).attr('href');
+            $.scrollTo(str, 1000, {offset:-120 });
+            return false;
+        });
+
+
 
     })();
 
